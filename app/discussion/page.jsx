@@ -7,13 +7,30 @@ import DiscussionItem from "../components/DiscussionItem";
 
 export default function DiscussionPage() {
     const [posts, setPosts] = useState([]);
+    const [user, setUser] = useState(null);
     const [newPost, setNewPost] = useState('');
     const [sembunyi, setSembunyi] = useState("sembunyi");
     const [sembunyi2, setSembunyi2] = useState("terlihat");
 
     useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (!token) {
+            router.push('/login');
+            return;
+        }
+
+        axios.post('/api/me', { tokened: token })
+            .then(res => {
+                setUser(res.data);
+            })
+            .catch(err => {
+                alert('Token invalid atau epired!');
+                router.push('/login');
+            });
         fetchPosts();
     }, []);
+
+    if (!user) return (<div className="loadingSek"><p>Loading...</p></div>);
 
     const fetchPosts = async () => {
         try {
