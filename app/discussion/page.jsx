@@ -4,6 +4,7 @@ import axios from "axios";
 import './DiscussionPage.css';
 import Link from "next/link";
 import DiscussionItem from "../components/DiscussionItem";
+import { useRouter } from "next/navigation";
 
 export default function DiscussionPage() {
     const [posts, setPosts] = useState([]);
@@ -11,6 +12,7 @@ export default function DiscussionPage() {
     const [newPost, setNewPost] = useState('');
     const [sembunyi, setSembunyi] = useState("sembunyi");
     const [sembunyi2, setSembunyi2] = useState("terlihat");
+    const router = useRouter();
 
     useEffect(() => {
         const token = localStorage.getItem('token');
