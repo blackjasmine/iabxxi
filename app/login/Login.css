@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logCont {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logCont .imgCont {
+    width: 55%;
+    height: 100vh;
+
+    background-image: url('../../public/cat.jpg');
+    background-size: cover;
+    background-position: center;
+    border: solid 10px white;
+    border-radius: 3%;
+}
+
+.cont {
+    width: 45%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.judLog p {
+    color: #0a0a0a;
+    font-size: 200%;
+}
+
+.formLog {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formLog form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 90%;
+    width: 80%;
+    position: relative;
+    top: -10px;
+}
+form p {
+    color: #0a0a0a;
+    font-size: 80%;
+    position: relative;
+    bottom: -20px;
+}
+form input {
+    height: 40px;
+    width: 100%;
+    border: solid 1px #0a0a0a;
+    border-radius: 0.4rem;
+    position: relative;
+    color: #0a0a0a;
+    text-align: center;
+    font-family: sans-serif;
+}
+form p.email {
+    bottom: -40px;
+}
+form .email {
+    bottom: -20px;
+}
+form .checkCont {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    top: -23px;
+}
+form .checkCont .check {
+    width: 15px;
+}
+form .checkCont .pCheck {
+    position: static;
+    color: #0a0a0a;
+    position: relative;
+    bottom: -2px;
+    font-size: 70%;
+}
+
+form .butt {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.butt button {
+    height: 40px;
+    width: 100%;
+    background-color: #0a0a0a;
+    border: none;
+    border-radius: 0.4rem;
+    position: relative;
+    top: -30px;
+    color: white;
+    cursor: pointer;
+}
+
+.footLog p {
+    color: #0a0a0a;
+}
+.footLog p .aLink {
+    color: #0287d0;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+    .judLog p {
+        color: #f0f0f0;
+    }
+    .judLog {
+        position: relative;
+        bottom: -5%;
+    }
+    form p {
+        color: #f0f0f0;
+    }
+    form input {
+        border: solid 1px #f0f0f0;
+        color: #f0f0f0;
+        background-color: transparent;
+    }
+    form .checkCont .pCheck {
+        color: #f0f0f0;
+    }
+    .butt button {
+        background-color: #f0f0f0;
+        color: #0a0a0a;
+    }
+    .footLog {
+        position: relative;
+        top: -5%;
+    }
+    .footLog p {
+        color: #f0f0f0;
+    }
+
+
+
+    .logCont .imgCont {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    .cont {
+        position: absolute;
+        width: 75%;
+    }
+    .cont .formLog {
+        height: 50%;
+        width: 90%;
+    }
+    .formLog form {
+        width: 90%;
+    }
+}

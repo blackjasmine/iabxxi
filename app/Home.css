@@ -1,0 +1,194 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.homeCont {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    overflow-x: hidden;
+
+    background-image: url('../public/cat.jpg');
+    background-position: 50% 24%;
+    background-size: cover;
+}
+.navBar {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+}
+.judNav {
+    position: relative;
+    width: 50%;
+    left: 35px;
+}
+.judul {
+    font-size: x-large;
+}
+.judul a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.navigation {
+    width: 50%;
+    position: relative;
+    right: 35px;
+}
+.navigation ul {
+    width: 100%;
+    list-style-type: none;
+    gap: 5%;
+
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+.ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+.ul li a:hover {
+    color: goldenrod;
+}
+.navigation ul .login {
+    padding: 4px 20px;
+    background-color: transparent;
+    border: solid 1px whitesmoke;
+    border-radius: 1rem;
+}
+.navigation ul .login:hover {
+    background-color: whitesmoke;
+}
+.navigation ul .login a {
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 9% 47%;
+    position: relative;
+    left: -20px;
+    bottom: -0.5px;
+    border-radius: 1rem;
+}
+.navigation ul .login a:hover {
+    color: black;
+}
+
+
+/* Section 1 */
+.sec1 {
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    top: 55px;
+    gap: 10px;
+
+    display: flex;
+    flex-direction: column;
+}
+.sec1 h1 {
+    position: relative;
+    left: 35px;
+    color: whitesmoke;
+}
+.sec1 p {
+    position: relative;
+    left: 35px;
+    width: 70%;
+
+    font-size: 70px;
+}
+.sec1 .trans {
+    opacity: 75%;
+    color: whitesmoke;
+}
+.sec1 .pTrans {
+    -webkit-text-stroke: 0.3px white;
+    color: transparent;
+    opacity: 100%;
+}
+.sec1 .pLog {
+    font-size: small;
+    opacity: 60%;
+    color: whitesmoke;
+}
+.sec1 .logButt {
+    font-size: small;
+    width: 300px;
+    padding: 3px 7px;
+    border: solid 1px whitesmoke;
+    border-radius: 1rem;
+    text-align: center;
+    opacity: 90%;
+}
+.sec1 .logButt:hover {
+    background-color: whitesmoke;
+}
+.sec1 .logButt a {
+    text-decoration: none;
+    padding: 1% 46%;
+    border-radius: 1rem;
+    position: relative;
+    left: -6px;
+    color: whitesmoke;
+}
+.sec1 .logButt a:hover {
+    color: black;
+}
+
+
+@media screen and (max-width: 576px) {
+    .homeCont {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .judNav {
+        left: 20px;
+    }
+    .navigation {
+        right: 5%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: end;
+    }
+    .navigation .ul {
+        width: 50%;
+    }
+    .navigation .ul li {
+        font-size: small;
+    }
+    .navigation .ul .login {
+        display: flex;
+        justify-content: center;
+    }
+    .navigation .ul .login a {
+        left: 0;
+    }
+
+    .sec1 {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 20px;
+
+        height: 70vh;
+    }
+    .sec1 h1 {
+        position: static;
+    }
+    .sec1 p {
+        position: static;
+        width: 100%;
+        font-size: 45px;
+    }
+}

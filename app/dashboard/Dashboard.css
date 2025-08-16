@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.loadingSek {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loadingSek p {
+    text-align: center;
+    color: black;
+}
+
+.dashCont {
+    display: flex;
+    flex-direction: row;
+
+    width: 100%;
+    height: 100vh;
+}
+
+.dashCont .sec1 {
+    width: 15%;
+    height: 100vh;
+    padding: 0 5px;
+    background-color: #f0f0f0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec1 .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.sec1 .info p {
+    font-size: 200%;
+    width: 100%;
+    left: 0;
+    padding-top: 20px;
+}
+.sec1 .info p.nama {
+    text-transform: uppercase;
+    text-align: center;
+}
+.info .upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.info .upload .hiddenInput {
+    opacity: 0;
+    position: absolute;
+    z-index: -1;
+}
+.info .upload .customFileButton {
+    border: solid 1px #0f0f0f;
+    padding: 2px 27px;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 12px;
+}
+.info .upload .customFileButton:hover {
+    background-color: #0f0f0f;
+    color: white;
+}
+.info .upload .buttonDash {
+    border: solid 1px #0f0f0f;
+    padding: 2px 6px;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 12px;
+}
+.info .upload .buttonDash:hover {
+    background-color: #0f0f0f;
+    color: white;
+}
+.info .logout {
+    position: absolute;
+    bottom: 10px;
+}
+.info .logout button {
+    border: none;
+    padding: 3px 10px;
+    border-radius: 1rem;
+    background-color: #0f0f0f;
+    color: white;
+    cursor: pointer;
+}
+
+.dashCont .sec2 {
+    width: 85%;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.sec2 .welcome {
+    position: relative;
+    top: 40px;
+    padding: 0 10px;
+}
+.welcome h1 span {
+    text-transform: uppercase;
+}
+.welcome .diskusiButt {
+    background-color: #0f0f0f;
+    color: #f0f0f0;
+    padding: 2px 8px;
+    border-radius: 0.3rem;
+    position: relative;
+    top: 15px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 576px) {
+    .dashCont .sec1 {
+        width: 100%;
+    }
+    .sec1 .info {
+        margin-top: 100px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 55px;
+    }
+    .info .logout {
+        position: absolute;
+        bottom: 30px;
+        z-index: 5;
+    }
+    .info .logout button {
+        z-index: 5;
+        cursor: pointer;
+    }
+
+    .info .upload .customFileButton {
+        z-index: 5;
+    }
+    .info .upload .buttonDash {
+        z-index: 5;
+    }
+
+    .dashCont .sec2 {
+        width: 0;
+        height: 0;
+    }
+    .sec2 .welcome {
+        height: 100%;
+        width: 100%;
+        padding-bottom: 40px;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec2 .welcome h1 {
+        font-size: 23px;
+        text-align: center;
+        position: relative;
+        top: -240px;
+    }
+    .sec2 .welcome p {
+        text-align: center;
+        font-size: 12px;
+        position: relative;
+        bottom: -110px;
+    }
+    .sec2 .welcome .diskusiButt {
+        position: relative;
+        top: 120px;
+    }
+}
+

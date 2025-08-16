@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.containerAb {
+    width: 100%;
+    height: 100vh;
+    background-color: #0f0f0f;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.containerAb .h23 {
+    color: #f0f0f0;
+}
+.containerAb .namaAb {
+    font-size: larger;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+.containerAb .imgAbout {
+    border-radius: 5rem;
+}
+.containerAb .descrypt {
+    width: 40%;
+    text-align: justify;
+    color: #f0f0f0;
+}
+
+/* Buat Contact.jsx */
+
+.containerAb .descrypt2 {
+    width: 40%;
+    text-align: center;
+    color: #f0f0f0;
+}
+
+
+
+
+/* Buat tampilan mobile */
+
+@media screen and (max-width: 576px) {
+    .containerAb .descrypt {
+        width: 85%;
+    }
+
+
+
+    .containerAb .descrypt2 {
+        width: 85%;
+    }
+}

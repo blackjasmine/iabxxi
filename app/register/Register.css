@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+}
+
+.regCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100vh;
+}
+
+.judReg h1 {
+    color: black;
+}
+
+.img {
+    width: 55%;
+    height: 100%;
+
+    background-image: url('../../public/cat.jpg');
+    background-position: center;
+    background-size: cover;
+    border: solid 10px white;
+    border-radius: 3%;
+}
+
+.judReg {
+    position: relative;
+    top: -35px;
+}
+
+.formCont {
+    width: 45%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.formCont .formReg label {
+    color: #0a0a0a;
+}
+
+.formReg {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.formReg form {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.formReg form label {
+    position: relative;
+    top: 7px;
+    font-size: 85%;
+}
+.formReg form input {
+    height: 40px;
+    font-family: sans-serif;
+    color: #0a0a0a;
+    border-radius: 0.5rem;
+    border: solid 1px black;
+    text-align: center;
+}
+.formReg form .hide2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    top: -17px;
+    gap: 5px;
+}
+.formReg form .hide2 .checkbox2 {
+    width: 15px;
+    position: relative;
+    bottom: -5px;
+}
+.formReg form .hide2 .p2 {
+    font-size: 75%;
+    position: relative;
+    top: 19px;
+}
+.formReg form button {
+    height: 40px;
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.formReg .footers {
+    color: #0a0a0a;
+    position: relative;
+    bottom: -50px;
+}
+.formReg .footers a {
+    color: #0287d0;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 576px) {
+    
+    .regCont .img {
+        width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+    .regCont .formCont {
+        position: absolute;
+        width: 75%;
+    }
+    .formCont .formReg label {
+        color: #f0f0f0;
+    }
+
+    .judReg {
+        top: 0;
+    }
+    .judReg h1 {
+        font-size: 28px;
+        color: #f0f0f0;
+    }
+
+    .formReg {
+        width: 95%;
+        max-height: 350px;
+        margin-top: 40px;
+    }
+    .formReg form {
+        width: 85%;
+        height: 90%;
+    }
+    .formReg form input {
+        color: #f0f0f0;
+        background-color: transparent;
+        border: solid 1px white;
+    }
+    .formReg form button {
+        background-color: #f0f0f0;
+        color: #0a0a0a;
+    }
+    .formReg .footers {
+        color: #f0f0f0;
+        bottom: -40px;
+    }
+    .formReg form .hide2 .p2 {
+        color: white;
+    }
+
+}
