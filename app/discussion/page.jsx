@@ -14,6 +14,16 @@ export default function DiscussionPage() {
     const [sembunyi2, setSembunyi2] = useState("terlihat");
     const router = useRouter();
 
+
+    const fetchPosts = async () => {
+        try {
+            const res = await axios.get('/api/discussions');
+            setPosts(res.data);
+        } catch (err) {
+            console.error('Gagal ambil diskusi: ', err);
+        }
+    };
+
     useEffect(() => {
         const token = localStorage.getItem('token');
         if (!token) {
@@ -33,15 +43,6 @@ export default function DiscussionPage() {
     }, []);
 
     if (!user) return (<div className="loadingSek"><p>Loading...</p></div>);
-
-    const fetchPosts = async () => {
-        try {
-            const res = await axios.get('/api/discussions');
-            setPosts(res.data);
-        } catch (err) {
-            console.error('Gagal ambil diskusi: ', err);
-        }
-    };
 
     const handlePost = async () => {
         if (!newPost.trim()) return;
